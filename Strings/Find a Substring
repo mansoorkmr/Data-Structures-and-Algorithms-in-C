@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int findSubstring(char str[], char substr[]) {
+    int len1 = strlen(str);
+    int len2 = strlen(substr);
+
+    for (int i = 0; i <= len1 - len2; i++) {
+        int j;
+        for (j = 0; j < len2; j++) {
+            if (str[i + j] != substr[j]) {
+                break;
+            }
+        }
+        if (j == len2) {
+            return i;  // Substring found at index i
+        }
+    }
+    return -1;  // Substring not found
+}
+
+int main() {
+    char str[] = "Hello, World!";
+    char substr[] = "World";
+    int index = findSubstring(str, substr);
+    if (index != -1) {
+        printf("Substring found at index %d\n", index);
+    } else {
+        printf("Substring not found\n");
+    }
+    return 0;
+}
