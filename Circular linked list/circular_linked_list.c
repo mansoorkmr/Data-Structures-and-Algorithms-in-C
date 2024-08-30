@@ -1,3 +1,4 @@
+//author Mansoor ahmad wani
 #include <stdio.h>
 #include <stdlib.h>
 
