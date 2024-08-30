@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};  // Initialize array with 5 elements
+    int value = 30;
+    int found = 0;
+
+    for (int i = 0; i < 5; i++) {
+        if (arr[i] == value) {
+            printf("Element %d found at index %d\n", value, i);
+            found = 1;
+            break;
+        }
+    }
+    if (!found) {
+        printf("Element %d not found in the array\n", value);
+    }
+
+    return 0;
+}
