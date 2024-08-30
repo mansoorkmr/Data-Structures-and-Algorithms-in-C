@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int arr1[5] = {10, 20, 30, 40, 50};  // First sorted array
+    int arr2[5] = {15, 25, 35, 45, 55};  // Second sorted array
+    int merged[10];
+    int i = 0, j = 0, k = 0;
+
+    // Merge arrays
+    while (i < 5 && j < 5) {
+        if (arr1[i] < arr2[j]) {
+            merged[k++] = arr1[i++];
+        } else {
+            merged[k++] = arr2[j++];
+        }
+    }
+
+    // Copy remaining elements of arr1
+    while (i < 5) {
+        merged[k++] = arr1[i++];
+    }
+
+    // Copy remaining elements of arr2
+    while (j < 5) {
+        merged[k++] = arr2[j++];
+    }
+
+    printf("Merged array: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", merged[i]);
+    }
+
+    return 0;
+}
