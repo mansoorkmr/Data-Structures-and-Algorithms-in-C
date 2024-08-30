@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int stringToInt(char str[]) {
+    int result = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        result = result * 10 + (str[i] - '0');
+    }
+    return result;
+}
+
+int main() {
+    char str[] = "12345";
+    int num = stringToInt(str);
+    printf("Converted integer: %d\n", num);
+    return 0;
+}
