@@ -1,4 +1,4 @@
-/**
+/**Author Mansoor ahmad wani
  * @brief Circular linked list structure and methods
  * @file circular_linked_list.h
  */
