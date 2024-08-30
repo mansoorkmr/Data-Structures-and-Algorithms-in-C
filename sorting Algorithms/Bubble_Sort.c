@@ -1,3 +1,4 @@
+//Author Mansoor ahmad wani
 #include <stdio.h>
 
 void BubbleSort(int a[], int n)
