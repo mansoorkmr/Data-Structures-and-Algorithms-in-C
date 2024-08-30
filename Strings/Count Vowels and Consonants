@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void countVowelsConsonants(char str[], int *vowels, int *consonants) {
+    *vowels = 0;
+    *consonants = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = str[i];
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+            ch = tolower(ch);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                (*vowels)++;
+            } else {
+                (*consonants)++;
+            }
+        }
+    }
+}
+
+int main() {
+    char str[] = "Hello, World!";
+    int vowels, consonants;
+    countVowelsConsonants(str, &vowels, &consonants);
+    printf("Vowels: %d, Consonants: %d\n", vowels, consonants);
+    return 0;
+}
